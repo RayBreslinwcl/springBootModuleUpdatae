@@ -33,7 +33,7 @@
     <!-- com.alibaba.dubbo是dubbo服务的包，在info以下的级别会产生大量的启动日志，调成WARN减少日志输出 -->
     <logger name="com.alibaba.dubbo" level="INFO"/>
 
-    <root level="INFO">
+    <root level="WARN">
         <appender-ref ref="FILE"/>
         <appender-ref ref="CONSOLE"/>
     </root>
