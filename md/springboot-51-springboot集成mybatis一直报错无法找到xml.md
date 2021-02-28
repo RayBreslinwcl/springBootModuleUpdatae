@@ -1,4 +1,4 @@
-一、IDEA Maven Mybatis target下无 xml文件
+ 一、IDEA Maven Mybatis target下无 xml文件
 
 ## 1.首先检查配置（在pom.xml中）需要加入以下配置
 
