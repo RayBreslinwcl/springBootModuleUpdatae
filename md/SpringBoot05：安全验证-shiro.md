@@ -1102,3 +1102,9 @@ springBootModule\springboot-shiro3-hm
 ### [SpringBoot与Shiro整合-权限管理实战视频](https://www.bilibili.com/video/BV1ct411x7CN?p=13&spm_id_from=pageDriver)
 
  
+
+# 8.遇到问题
+
+## 1.mybatis的xml文件没有到达target下面，是因为pom.xml文件下面没有配置文件过滤
+
+参考：springBootModule\md\springboot-51-springboot集成mybatis一直报错无法找到xml.md
