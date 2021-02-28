@@ -33,3 +33,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+
+INSERT INTO `user` VALUES (1, 'admin', '123456', 'user:add');
+INSERT INTO `user` VALUES (2, 'admin2', '123456', 'user:update');
