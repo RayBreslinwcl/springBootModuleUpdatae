@@ -10,7 +10,6 @@ public class AsyncController {
 
    @Autowired
    AsyncService asyncService;
-
    @GetMapping("/hello")
    public String hello(){
        asyncService.hello();
