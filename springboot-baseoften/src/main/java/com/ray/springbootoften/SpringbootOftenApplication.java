@@ -12,6 +12,7 @@ public class SpringbootOftenApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootOftenApplication.class, args);
+
     }
 
 }
