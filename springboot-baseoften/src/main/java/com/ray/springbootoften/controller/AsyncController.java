@@ -77,4 +77,20 @@ public class AsyncController {
     }
 
 
+    @GetMapping("/piedata")
+    public String getpiedata(){
+//        List data=Arrays.asList("'受理率': '6%'", "'办理率': '85%'", "'办结率': '95%'");
+
+//        return "{'受理率': '6%','办理率': '85%','办结率': '95%'}";
+        JSONObject jo1=new JSONObject();
+        jo1.put("受理率","6%");
+//        JSONObject jo2=new JSONObject();
+//        jo2.put("办理率","6%");
+//        JSONObject jo3=new JSONObject();
+//        jo3.put("办结率","6%");
+        jo1.put("办理率","6%");
+        jo1.put("办结率","6%");
+        return jo1.toString();
+    }
+
 }
