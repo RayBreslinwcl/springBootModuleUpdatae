@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * 参考：https://blog.csdn.net/qq_40437152/article/details/88866035
+ */
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
  
