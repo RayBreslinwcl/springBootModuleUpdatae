@@ -35,7 +35,11 @@
 
         </where>
     </sql>
-    	
+
+	<select id="getUsers" resultType= "cn.abel.bean.User">
+       select * from user
+    </select>
+
     <select id="getByMap" parameterType="map" resultMap="userMap">
     	SELECT * FROM user
 		<include refid="queryCondition" />

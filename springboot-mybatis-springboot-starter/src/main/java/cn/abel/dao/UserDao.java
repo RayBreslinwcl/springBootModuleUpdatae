@@ -20,4 +20,6 @@ public interface UserDao {
     int update(User user);
 
     int delete(Integer id);
+
+    List<User> getUsers();
 }

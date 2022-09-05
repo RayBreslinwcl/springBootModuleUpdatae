@@ -21,6 +21,10 @@ public class UserService {
 	public User getById(Integer id){
 		return userDao.getById(id);
 	}
+
+	public List<User> getUsers(){
+		return userDao.getUsers();
+	}
 	
 	public User create(User user){
 		userDao.create(user);
