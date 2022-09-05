@@ -30,10 +30,10 @@ CREATE TABLE `user` (
   `create_time` datetime DEFAULT NULL,
   `role` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_I NCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
 
-INSERT INTO `user` VALUES (1, 'admin', '123456', 'user:add');
-INSERT INTO `user` VALUES (2, 'admin2', '123456', 'user:update');
+INSERT INTO `user`(id,name,address,mobile,role) VALUES ( 1,'admin','shanghai', '123456', 1);
+INSERT INTO `user`(id,name,address,mobile,role) VALUES ( 2,'admin2','pudong', '223456', 2);
