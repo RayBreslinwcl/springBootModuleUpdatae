@@ -274,7 +274,7 @@ l 建立test.html页面
 
 # **4.** ***\*Spring Boot与Shiro整合实现用户认证\****
 
-## **4.1.** ***\*分析Shiro的核心API\****
+## **4.1.分析Shiro的核心API**
 
 Subject： 用户主体（把操作交给SecurityManager）
 
@@ -1000,7 +1000,7 @@ public class UserRealm extends AuthorizingRealm{
 
 
 
-## **5.2.** ***\*完成Shiro的资源授权\****
+## **5.2.** **完成Shiro的资源授权**
 
 UserRealm：
 
@@ -1024,7 +1024,7 @@ UserRealm：
 
 
 
-# **6.** ***\*thymeleaf和shiro标签整合使用\****
+# **6.** **thymeleaf和shiro标签整合使用**
 
 ## **6.1.** ***\*导入thymeleaf扩展坐标\****
 
