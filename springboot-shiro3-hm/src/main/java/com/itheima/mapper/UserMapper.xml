@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		NAME, 
 		PASSWORD
 		FROM 
-		user where name = #{value}
+		user_shiro where name = #{value}
 	</select>
 	
 	<select id="findById" parameterType="int" resultType="user">
@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		PASSWORD,
 		perms
 		FROM
-		user where id = #{value}
+		user_shiro where id = #{value}
 	</select>
 
 </mapper>
