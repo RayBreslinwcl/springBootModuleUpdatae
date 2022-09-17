@@ -215,7 +215,7 @@ l 引入thymeleaf依赖
 
 l 在Controller添加测试方法
 
- ```xml
+ ```java
 /**
 	 * 测试thymeleaf
 	 */
@@ -272,7 +272,7 @@ l 建立test.html页面
 
 
 
-# **4.** ***\*Spring Boot与Shiro整合实现用户认证\****
+# **4.** Spring Boot与Shiro整合实现用户认证
 
 ## **4.1.分析Shiro的核心API**
 
@@ -345,7 +345,7 @@ public class UserRealm extends AuthorizingRealm{
 
  
 
-### **4.2.3.** ***\*编写Shiro配置类（\*）\****
+### **4.2.3.** 编写Shiro配置类（\*）
 
 ```java
 package com.itheima.shiro;
@@ -558,7 +558,7 @@ public class ShiroConfig {
 
  
 
-### **4.4.3.** ***\*编写Realm的判断逻辑\****
+### **4.4.3.** 编写Realm的判断逻辑
 
 ```java
 package com.itheima.shiro;
