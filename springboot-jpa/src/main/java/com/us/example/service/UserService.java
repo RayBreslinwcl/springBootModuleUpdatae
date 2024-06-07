@@ -1,5 +1,6 @@
 package com.us.example.service;
 
+import java.util.List;
 import java.util.Map;
 
 import com.us.example.bean.User;
@@ -17,5 +18,5 @@ public interface UserService {
 	 */
 	public User getUserByName(String username);
 	
-	
+	public User findAll();
 }
