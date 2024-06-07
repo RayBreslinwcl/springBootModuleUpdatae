@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User findAll() {
-		return new User();
+	public List<User> findAll() {
+		return userJpaDao.findAll();
 	}
 }

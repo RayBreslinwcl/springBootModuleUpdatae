@@ -21,15 +21,20 @@ public class UserServiceTest {
     @Autowired
     private UserService userService;
 
-    @Test
-    private void testfindAll(){
-
-        System.out.println(userService.findAll());
-    }
+//    @Test
+//    void testfindAll(){
+//
+//        System.out.println(userService.findAll());
+//    }
 
 
     @Test
     void testGetUserByName1() {
         System.out.println(userService.getUserByName("admin"));
+    }
+
+    @Test
+    void findAll() {
+        System.out.println(userService.findAll());
     }
 }
