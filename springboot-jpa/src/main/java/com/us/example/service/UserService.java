@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.Map;
 
 import com.us.example.bean.User;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+
+import javax.transaction.Transactional;
 
 /**
  * The Interface UserService.
@@ -19,4 +23,6 @@ public interface UserService {
 	public User getUserByName(String username);
 	
 	public List<User> findAll();
+
+	public List<User> findAllByAddress(String address);
 }

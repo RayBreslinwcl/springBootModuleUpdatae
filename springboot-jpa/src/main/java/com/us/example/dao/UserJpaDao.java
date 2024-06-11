@@ -3,6 +3,11 @@ package com.us.example.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.us.example.bean.User;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+
+import javax.transaction.Transactional;
+import java.util.List;
 
 /**
  * The Interface UserJpaDao.
@@ -18,5 +23,9 @@ public interface UserJpaDao extends JpaRepository<User, Long> {
      */
     User findByName(String name);
 
+    @Query(value = "SELECT * FROM user WHERE address = ?1", nativeQuery = true)
+    @Modifying
+    @Transactional
+    List<User> findAllByAddress(String address);
 
 }

@@ -35,4 +35,10 @@ public class UserServiceImpl implements UserService {
 	public List<User> findAll() {
 		return userJpaDao.findAll();
 	}
+
+	@Override
+	public List<User> findAllByAddress(String address) {
+		return userJpaDao.findAllByAddress(address);
+	}
 }
+

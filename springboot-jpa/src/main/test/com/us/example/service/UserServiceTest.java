@@ -37,4 +37,10 @@ public class UserServiceTest {
     void findAll() {
         System.out.println(userService.findAll());
     }
+
+
+    @Test
+    void findAllByAddress() {
+        System.out.println(userService.findAllByAddress("minhang"));
+    }
 }
