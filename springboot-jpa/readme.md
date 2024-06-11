@@ -145,6 +145,10 @@ public class UserServiceImpl implements UserService {
 
 ## 2.直观的方式传参：参数无序
 
+参考：https://blog.csdn.net/malachi95/article/details/53538287
+
+
+
 在上面的操作方式中参数传递都是以一种有序的方式传递的，另外还有一种更为直观的方式来传递参数，下面举个例子说明：
 
 在接口`IUserService`中添加方法：
