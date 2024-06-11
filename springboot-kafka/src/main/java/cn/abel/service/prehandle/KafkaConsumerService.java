@@ -28,6 +28,11 @@ public class KafkaConsumerService {
         }
     }
 
+    /**
+     * processMessage2和processMessage一样都是可以消费对应topic的消息
+     * @param events
+     * @param consumer
+     */
     @KafkaListener(topics = "${log.statistical.kafka.topic}", containerFactory = "kafkaListenerContainerFactory")
     public void processMessage2(List<String> events, Consumer<String, String> consumer) {
 //        public void receive(List<String> events, Consumer<String, String> consumer) {
