@@ -1,5 +1,6 @@
 package cn.abel.service.prehandle;
 
+import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -19,10 +20,20 @@ public class KafkaConsumerService {
 
     @KafkaListener(topics = "${log.statistical.kafka.topic}", containerFactory = "kafkaListenerContainerFactory")
     public void processMessage(List<ConsumerRecord<?, ?>> records) {
-
+//        public void receive(List<String> events, Consumer<String, String> consumer) {
         for (ConsumerRecord<?, ?> record : records) {
+            System.out.println("=====================processMessage=====================");
             String message = (String) record.value();
             splitService.saveAndSplitLog(message);
+        }
+    }
+
+    @KafkaListener(topics = "${log.statistical.kafka.topic}", containerFactory = "kafkaListenerContainerFactory")
+    public void processMessage2(List<String> events, Consumer<String, String> consumer) {
+//        public void receive(List<String> events, Consumer<String, String> consumer) {
+        for (String event : events) {
+            System.out.println("=====================processMessage2=====================");
+            System.out.println(event);
         }
     }
 }
