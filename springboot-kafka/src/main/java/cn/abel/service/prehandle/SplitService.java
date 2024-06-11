@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Slf4j
+
 public class SplitService {
 
     private static final Logger logger = LoggerFactory.getLogger(SplitService.class);
@@ -21,6 +23,8 @@ public class SplitService {
         JSONObject jsonObject = JSONObject.parseObject(message);
         // 从kafka 中获取到数据
         String content = jsonObject.getString("message");
+        //打印
+        System.out.println(content);
     }
 
 }
