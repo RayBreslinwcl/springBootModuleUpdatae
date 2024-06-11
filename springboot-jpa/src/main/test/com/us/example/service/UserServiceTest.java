@@ -43,4 +43,9 @@ public class UserServiceTest {
     void findAllByAddress() {
         System.out.println(userService.findAllByAddress("minhang"));
     }
+
+    @Test
+    void findAllByAddressAndName() {
+        System.out.println(userService.findAllByAddressAndName("minhang", "admin6"));
+    }
 }

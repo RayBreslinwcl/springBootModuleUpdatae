@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.us.example.bean.User;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -28,4 +29,8 @@ public interface UserJpaDao extends JpaRepository<User, Long> {
     @Transactional
     List<User> findAllByAddress(String address);
 
+    @Query(value = "SELECT * FROM user WHERE address =:address and name=:name", nativeQuery = true)
+    @Modifying
+    @Transactional
+    List<User> findAllByAddressAndName(@Param("address")String address, @Param("name") String name);
 }

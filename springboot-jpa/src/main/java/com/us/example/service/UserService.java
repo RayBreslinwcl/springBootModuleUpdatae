@@ -25,4 +25,11 @@ public interface UserService {
 	public List<User> findAll();
 
 	public List<User> findAllByAddress(String address);
+
+	/**
+	 * 无序传参
+	 * @param address
+	 * @return
+	 */
+	public List<User> findAllByAddressAndName(String address,String name);
 }
