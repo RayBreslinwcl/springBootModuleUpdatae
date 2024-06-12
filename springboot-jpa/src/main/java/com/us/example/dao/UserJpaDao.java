@@ -29,6 +29,10 @@ public interface UserJpaDao extends JpaRepository<User, Long> {
     @Transactional
     List<User> findAllByAddress(String address);
 
+//    @Query(value = "SELECT * FROM user WHERE address in (?1)", nativeQuery = true) //这样添加括号也可以
+    @Query(value = "SELECT * FROM user WHERE address in ?1", nativeQuery = true)
+    List<User> findAllByInAddress(List<String> addresses);
+
     @Query(value = "SELECT * FROM user WHERE address =:address and name=:name", nativeQuery = true)
     @Modifying
     @Transactional

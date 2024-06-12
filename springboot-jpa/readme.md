@@ -318,3 +318,15 @@ public class UserServiceImpl implements UserService {
 
 
 
+## 3.jap的通过sql的in去查询实现
+
+### （1）DAO
+
+带不带括号都可以实现。
+
+```java
+//    @Query(value = "SELECT * FROM user WHERE address in (?1)", nativeQuery = true) //这样添加括号也可以
+    @Query(value = "SELECT * FROM user WHERE address in ?1", nativeQuery = true)
+    List<User> findAllByInAddress(List<String> addresses);
+```
+

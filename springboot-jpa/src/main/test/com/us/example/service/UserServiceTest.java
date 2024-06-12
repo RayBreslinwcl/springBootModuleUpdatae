@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @ClassDescription:
  * @Author:
@@ -47,5 +51,15 @@ public class UserServiceTest {
     @Test
     void findAllByAddressAndName() {
         System.out.println(userService.findAllByAddressAndName("minhang", "admin6"));
+    }
+
+    @Test
+    void findAllByInAddress() {
+        String address="minhang,jingan";
+        //strings和arrayList都可以
+        List<String> strings = Arrays.asList(address.split(","));
+        ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(address.split(",")));
+
+        System.out.println(userService.findAllByInAddress(strings));
     }
 }
