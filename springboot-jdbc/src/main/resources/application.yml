@@ -18,3 +18,12 @@ spring:
       #mysql5.8���ϣ�����ʱ������������һ��ʱ�����ã�serverTimezone=UTC
       jdbc-url: jdbc:postgresql://192.168.136.100:5432/postgres
       driver-class-name: org.postgresql.Driver
+
+    hikari:
+      minimumIdle: 5
+      maximum-pool-size: 30
+      idle-timeout: 60000
+      maxLifetime: 60000
+      pool-name: MyHikariCP
+      connection-init-sql: SELECT 1 FROM DUAL
+
