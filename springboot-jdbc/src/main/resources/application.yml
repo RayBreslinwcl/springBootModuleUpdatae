@@ -5,8 +5,16 @@
 
 spring:
   datasource:
-    username: root
-    password: 123456
-    #mysql5.8ÒÔÉÏ£¬¼ÙÈçÊ±Çø±¨´í£¬¾ÍÔö¼ÓÒ»¸öÊ±ÇøÅäÖÃ£ºserverTimezone=UTC
-    url: jdbc:mysql://192.168.0.8:3306/test?userUnicode=true?characterEncodeing=utf-8
-    driver-class-name: com.mysql.jdbc.Driver
+    mysql:
+      username: root
+      password: 123456
+      #mysql5.8ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½serverTimezone=UTC
+      jdbc-url: jdbc:mysql://192.168.136.100:3306/test?userUnicode=true?characterEncodeing=utf-8
+      driver-class-name: com.mysql.jdbc.Driver
+
+    postgresql:
+      username: postgres
+      password: 123456
+      #mysql5.8ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½serverTimezone=UTC
+      jdbc-url: jdbc:postgresql://192.168.136.100:5432/postgres
+      driver-class-name: org.postgresql.Driver
