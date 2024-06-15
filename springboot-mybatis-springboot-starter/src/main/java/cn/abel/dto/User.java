@@ -1,4 +1,4 @@
-package cn.abel.bean;
+package cn.abel.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

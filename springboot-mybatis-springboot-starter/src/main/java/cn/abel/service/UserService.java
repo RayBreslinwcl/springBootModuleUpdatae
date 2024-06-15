@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cn.abel.dao.UserDao;
-import cn.abel.bean.User;
+import cn.abel.dto.User;
 
 @Service
 public class UserService {

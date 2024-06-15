@@ -1,7 +1,7 @@
 package cn.abel.service;
 
 import cn.abel.BaseTest;
-import cn.abel.bean.User;
+import cn.abel.dto.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,6 +1,6 @@
 package cn.abel.controller;
 
-import cn.abel.bean.User;
+import cn.abel.dto.User;
 import cn.abel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

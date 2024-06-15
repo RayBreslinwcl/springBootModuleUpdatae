@@ -3,7 +3,7 @@ package cn.abel.dao;
 import java.util.List;
 import java.util.Map;
 
-import cn.abel.bean.User;
+import cn.abel.dto.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
