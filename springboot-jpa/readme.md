@@ -330,3 +330,20 @@ public class UserServiceImpl implements UserService {
     List<User> findAllByInAddress(List<String> addresses);
 ```
 
+
+
+## 4.jpa查询mysql的一个字段，逗号分隔，查询其中一个。'4','fe','ve'，查询是否包含'fe'
+
+```java
+    /**
+     * FIND_IN_SET来完成这个功能，这个函数可以用来在逗号分隔的字符串中检查某个子字符串是否存在。
+     * "表名1,表名2,表名3"
+     * @param address
+     * @return
+     */
+    @Query(value = "SELECT * FROM user WHERE FIND_IN_SET(?1,address) ", nativeQuery = true)
+    List<User> findAllByAddressInSet(String address);
+```
+
+
+

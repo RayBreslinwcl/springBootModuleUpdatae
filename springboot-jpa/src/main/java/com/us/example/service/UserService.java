@@ -28,6 +28,9 @@ public interface UserService {
 
 	public List<User> findAllByAddress(String address);
 
+	public List<User> findAllByAddressInSet(String address);
+
+
 	/**
 	 * 无序传参
 	 * @param address

@@ -33,6 +33,16 @@ public interface UserJpaDao extends JpaRepository<User, Long> {
     @Query(value = "SELECT * FROM user WHERE address in ?1", nativeQuery = true)
     List<User> findAllByInAddress(List<String> addresses);
 
+    /**
+     * FIND_IN_SET来完成这个功能，这个函数可以用来在逗号分隔的字符串中检查某个子字符串是否存在。
+     * "表名1,表名2,表名3"
+     * @param address
+     * @return
+     */
+    @Query(value = "SELECT * FROM user WHERE FIND_IN_SET(?1,address) ", nativeQuery = true)
+    List<User> findAllByAddressInSet(String address);
+
+
     @Query(value = "SELECT * FROM user WHERE address =:address and name=:name", nativeQuery = true)
     @Modifying
     @Transactional
