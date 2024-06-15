@@ -40,3 +40,10 @@ Received message: {"message": "小明","age": 18}
 小明
 ```
 
+
+
+## 4.spring-kafka 出现Could not autowire. No beans of 'KafkaTemplate 
+
+https://blog.csdn.net/suject/article/details/80845443解决：使用resource注释
+
+![image-20240615084832499](readme.assets/image-20240615084832499.png)
