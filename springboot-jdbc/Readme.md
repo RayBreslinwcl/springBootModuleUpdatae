@@ -140,7 +140,35 @@ md_springboot_知识点\01-基本注解-2-Autowired和Qualifier多个bean时，�
 
 已经添加
 
+## 3.jdbcTemplate实现增上改查
 
+jdbcTemplate是Spring提供的用于简化数据库操作的类库。以下是使用jdbcTemplate实现增删改查的示例：
+
+1. 添加数据：
+
+```
+jdbcTemplate.update("INSERT INTO my_table (id, name, age) VALUES (?, ?, ?)", id, name, age);
+```
+
+2. 查询数据：
+
+```
+List<Map<String, Object>> result = jdbcTemplate.queryForList("SELECT * FROM my_table");
+```
+
+3. 更新数据：
+
+```
+jdbcTemplate.update("UPDATE my_table SET name = ?, age = ? WHERE id = ?", name, age, id);
+```
+
+4. 删除数据：
+
+```
+jdbcTemplate.update("DELETE FROM my_table WHERE id = ?", id);
+```
+
+其中，`update`方法用于执行更新操作，`queryForList`方法用于执行查询操作。在SQL语句中可以使用问号占位符`?`，然后在执行方法时指定实际参数。
 
 # 四、数据库连接池HikariConfig
 
