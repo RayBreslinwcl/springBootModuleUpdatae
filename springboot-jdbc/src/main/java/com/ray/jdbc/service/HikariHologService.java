@@ -26,10 +26,11 @@ public class HikariHologService {
         // 创建动态的占位符
 
         // 构建查询语句
-        String sql = String.format("SELECT * FROM %s ", "public.segment_detail");
+        String sql = String.format("SELECT * FROM %s where 1=2", "public.segment_detail");
 
 //        return jdbcTemplate.queryForList(sql, String.class);
-        return jdbcTemplate.queryForList(sql);
+        List<Map<String, Object>> results = jdbcTemplate.queryForList(sql);
+        return results;
 
     }
 
