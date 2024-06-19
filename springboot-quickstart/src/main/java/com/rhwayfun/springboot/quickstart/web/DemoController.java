@@ -17,9 +17,9 @@ public class DemoController {
     @Autowired
     Dog dog;
 
-    @RequestMapping("/now")
+    @PostMapping("/now")
     public String now(){
-        return "hello";
+        return "hello of (8081) : Springboot-quickstart";
     }
 
     @RequestMapping("/dog")
