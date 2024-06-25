@@ -27,6 +27,8 @@ class HikariHologServiceTest {
         List<Map<String, Object>> allData = hikariHologService.getAllData();
         if(allData.size()!=0){
             System.out.println(hikariHologService.getAllData());
+            System.out.println("one_id："+allData.get(0).get("one_id"));
+
         }else {
             System.out.println("为空");
         }
@@ -71,5 +73,10 @@ class HikariHologServiceTest {
 
         System.out.println(sqlContent);
 
+    }
+
+    @Test
+    void test2(){
+        System.out.println(String.valueOf(System.currentTimeMillis()));
     }
 }
