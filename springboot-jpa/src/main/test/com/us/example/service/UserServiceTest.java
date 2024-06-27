@@ -118,7 +118,8 @@ public class UserServiceTest {
 
     @Test
     void findAllByAddressInSet() {
-        String address="songjiang";
+//        String address="songjiang";
+        String address="test.minhang";
 
         System.out.println(userService.findAllByAddressInSet(address));
     }
