@@ -55,5 +55,9 @@ public class UserServiceImpl implements UserService {
 	public List<User> findAllByAddressInSet(String address) {
 		return userJpaDao.findAllByAddressInSet(address);
 	}
+
+	public void addUser(User user) {
+		userJpaDao.save(user);
+	}
 }
 
