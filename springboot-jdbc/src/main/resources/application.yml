@@ -6,6 +6,7 @@
 spring:
   datasource:
     mysql:
+      active: true
       username: root
       password: 123456
       #mysql5.8���ϣ�����ʱ������������һ��ʱ�����ã�serverTimezone=UTC
